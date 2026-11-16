@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Image Carousel</title>
+
+<style>
+
+    body {
+        font-family: Arial;
+        text-align: center;
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: darkblue;
+    }
+
+    img {
+        width: 500px;
+        height: 300px;
+        border: 5px solid white;
+        border-radius: 15px;
+
+        /* Smooth effect */
+        transition: 0.5s;
+
+        /* Default filter */
+        filter: none;
+    }
+
+    /* Zoom when hovering */
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: navy;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: orange;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+document.writeln("<h1>MY IMAGE CAROUSEL</h1>");
+
+document.writeln("<img id='gallery' src='https://picsum.photos/id/1015/500/300'>");
+
+document.writeln("<br><br>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').src='https://picsum.photos/id/1015/500/300'\">IMAGE 1</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').src='https://picsum.photos/id/1018/500/300'\">IMAGE 2</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').src='https://picsum.photos/id/1019/500/300'\">IMAGE 3</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').src='https://picsum.photos/id/1020/500/300'\">IMAGE 4</button>");
+
+document.writeln("<br><br>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').style.filter='blur(5px)'\">BLUR</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').style.filter='grayscale(100%)'\">GRAYSCALE</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').style.filter='brightness(150%)'\">BRIGHTNESS</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').style.filter='sepia(100%)'\">SEPIA</button>");
+
+document.writeln("<button onclick=\"document.getElementById('gallery').style.filter='none'\">NORMAL</button>");
+
+</script>
+
+</body>
+</html>
